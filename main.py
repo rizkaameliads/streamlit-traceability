@@ -63,8 +63,8 @@ def load_spatial_data():
     try:
         # NOTE: Update these paths to be accessible by your Streamlit app
         # It's best to place them in the same directory or a subdirectory.
-        peatland_khGambut_gdf = gpd.read_file("INDONESIA PEATLAND 2017.zip")
-        protected_areas_gdf = gpd.read_file("Protected_Areas_Generalized.zip")
+        peatland_khGambut_gdf = gpd.read_file("data/INDONESIA PEATLAND 2017.zip")
+        protected_areas_gdf = gpd.read_file("data/Protected_Areas_Generalized.zip")
 
         # Ensure CRS is consistent (WGS84)
         peatland_khGambut_gdf = peatland_khGambut_gdf.to_crs(epsg=4326)
@@ -115,7 +115,7 @@ st.sidebar.markdown("How to use this dashboard:")
 logo_col, title_col = st.columns([2, 12])
 
 with logo_col:
-    st.image("RCT_Logo.png")
+    st.image("image/RCT_Logo.png")
 
 with title_col:
     st.title("TRACEABILITY DASHBOARD")
